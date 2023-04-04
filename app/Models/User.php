@@ -17,10 +17,18 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    public $timestamps = false;
+    public $incrementing = false;
     protected $fillable = [
+        'id',
         'name',
         'email',
-        'password',
+        'pin',
+        'mobile',
+        'gender',
+        'is_admin',
+        'created_at',
+        'active'
     ];
 
     /**
